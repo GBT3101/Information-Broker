@@ -1,0 +1,41 @@
+<div>
+	<snap-drawer>
+		<div class="snap-menu">
+			<div class="sidebar-header text-center">
+				<img src="images/User.png" alt="" class="sidebar-img img-circle">
+			</div>
+			<ul class="snap-ul">
+				<li ng-class="{active: $state.includes('overview')}"><a ui-sref="overview">HOME</a></li>
+				<li ng-class="{active: $state.includes('profile')}"><a ui-sref="profile">PROFILE</a></li>
+                <li ng-class="{active: $state.includes('purchase')}"><a ui-sref="purchase">PURCHASE</a></li>
+				<li><a ui-sref="login">LOGOUT</a></li>
+				<!--<li><a href="http://strapui.com">MORE PREMIUM THEMES</a></li> -->
+			</ul>
+		</div>
+	</snap-drawer>
+	<snap-dragger></snap-dragger>
+	<snap-content snap-opt-tap-to-close="false">
+
+		<a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
+			<span class="menutoggle">
+				<i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
+				<i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+			</span>
+		</a>
+		
+		<div class="fr">
+		<h2>Overview </h2>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Welcome!</h1>
+				You must be the consumer we heard so much about, feel free to spend your money.<br /><br />
+                YES, PAY UP BITCH.
+				<p>
+					<!-- <a ui-sref="login" class="btn btn-primary btn-lg btn-white">Logout</a> -->
+				</p>
+				
+			</div>
+		</div>
+	</snap-content>	
+</div>

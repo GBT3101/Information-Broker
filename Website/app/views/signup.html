@@ -1,0 +1,41 @@
+<div class="login-page">
+	
+    <div class="img-container">
+		<div class="text-center pull-right photo">
+			<img src="images/signup.jpg" class="user-avatar img-circle img-responsive" />
+				<!--<h1>INFORMATION<br/ > <span>BROKER</span><br /><small>Beta Version</small></h1>-->
+			</div>
+		</div>
+		
+		<div align="center" class="form-content">
+			
+			<form name="signupForm" role="form" ng-submit="signupForm.$valid && signUp()" class="bottom-75" novalidate>
+			<div  class="table-form">
+				<div  class="form-groups">
+                    <div style="color:red" bold>
+                       <p style="font-size:25px" bold> {{alert}}</p>
+                    </div>
+                    <div class="form-group">
+						<input type="text" class="form-control input-lg" id="" placeholder="Enter Full Name" ng-model="newUser.fullName" pattern=".{3,10}" required>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control input-lg" id="" placeholder="Enter Email" ng-model="newUser.email" required>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control input-lg" id="" wj-validation-error="checkPwd != newUser.password ? 'Passwords don\'t match' : ''" placeholder="Enter Password" ng-model="newUser.password" pattern=".{4,10}" required>
+					</div>
+                    <div class="form-group">
+						<input name="checkPass" type="password" class="form-control input-lg"  id="" placeholder="Enter Password Again" ng-model="checkPwd" wj-validation-error="checkPwd != newUser.password ? 'Passwords don\'t match' : ''"  pattern=".{4,10}" required>
+					</div>
+                    <div>
+					<a ui-sref="login" style="color:white">BACK</a>
+				</div>
+				</div>
+				<div class="button-container">
+					<button type="submit" class="btn btn-default login"><img src="images/signUp.png" alt=""></button>
+				</div>
+			</div>
+			</form>
+		</div>			
+	</div>
+</div>
